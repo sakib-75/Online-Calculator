@@ -1,0 +1,152 @@
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        border: none;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .header-body {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .tabs .tab,
+    .tabs label {
+        order: initial;
+    }
+
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+
+    /* Number calculation */
+    .std-img {
+        width: 100%;
+    }
+
+    .std-formula-tbl {
+        margin: 15px 0px;
+    }
+
+    .std-formula-tbl th {
+        display: none;
+    }
+
+    .std-formula-tbl td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Unit conversion */
+    .conv-body {
+        grid-template-columns: auto;
+    }
+
+    .swap-btn {
+        transform: rotate(90deg);
+        margin: 15px 0px;
+    }
+
+    .arrow i {
+        font-size: 24px;
+    }
+
+    /*  CGPA */
+    .course-table td {
+        display: block;
+    }
+
+    .course-table th {
+        display: none;
+    }
+    .add-more{
+        font-size: 100%;
+    }
+
+    /* BMI */
+    #inch {
+        margin-left: 74px;
+        margin-top: 5px;
+    }
+
+    .bmi-inp-body input {
+        width: 150px;
+    }
+
+    .item {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 100%;
+        width: 100%;
+
+    }
+
+    .ans-bmi {
+        width: 100%;
+
+    }
+
+    .calculateBtn,
+    #resetBtn {
+        font-size: 100%;
+        padding: 8px 10px;
+    }
+
+    /* Distance */
+    .cs-result,
+    .ed-result,
+    .mn-result,
+    .mnk-result,
+    .supd-result {
+        font-size: 16px;
+    }
+
+    .part-img {
+        width: 30%;
+    }
+
+    .ed-formula-img,
+    .mn-formula-img,
+    .mnk-formula-img,
+    .supd-formula-img,
+    .cs-formula-img {
+        width: 100%;
+    }
+
+    .inp-toggle{
+        display: grid;
+        grid-template-columns: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Normalization */
+    .norm-formula1, .norm-formula2, .norm-formula3{
+        width: 100%;
+    }
+    .norm-result-bdy{
+        font-size: 100%;
+    }
+
+
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+    .container,
+    .header-body {
+        width: 80%;
+    }
+
+}

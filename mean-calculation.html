@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mean Calculation</title>
+    <link rel="stylesheet" href="CSS/all-style.css">
+    <link rel="stylesheet" href="CSS/math.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <script src="JavaScript/math.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header class="head">
+        <div class="header-body">
+            <a class="logo" href="index.html">Calculator.com</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="math.html">Math</a></li>
+                    <li><a class="nav-link" href="other.html">Other</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" type="button" onclick="mobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <ul class="mobile-nav-list">
+                <li><a class="nav-link mobile-nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link mobile-nav-link" href="math.html">Math</a></li>
+                <li><a class="nav-link mobile-nav-link" href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <p class="redText">Please provide numbers separated by a comma</p>
+        <div class="inputBox">
+            <textarea id="numbers" class="numbersBox" rows="10" placeholder="Enter number here..."></textarea>
+            <div class="radioArea">
+                <input type="radio" name="radio" value="p"> Population
+                <input type="radio" name="radio" value="s"> Sample
+                <div class="tooltip">
+                    <img src="images/help.png" alt="">
+                    <span class="tooltiptext">Select <b>Population</b> if the data contains all measurable values, or
+                        all of the values you are interested in.<br>Select <b>Sample</b> if the data is a sample of a
+                        large or unlimited population and you wish to make a statement about the entire
+                        population.</span>
+                </div>
+            </div>
+            <div class="btnArea">
+                <button class="calculateBtn" onclick="reloadP()"><i
+                        class="fas fa-chevron-circle-right"></i>
+                    Calculate</button>
+                <a href="mean-calculation.html"><button id="resetBtn"><i class="fas fa-redo"></i> Reset</button></a>
+            </div>
+        </div>
+
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <span id="error"> </span>
+        </div>
+        <br>
+
+        <table id="Table">
+            <tbody>
+                <tr>
+                    <td>Min</td>
+                    <td id="min"></td>
+                </tr>
+                <tr>
+                    <td>Max</td>
+                    <td id="max"></td>
+                </tr>
+                <tr>
+                    <td>Count</td>
+                    <td id="count"></td>
+                </tr>
+                <tr>
+                    <td>Sum</td>
+                    <td id="sum"></td>
+                </tr>
+                <tr>
+                    <td>Median</td>
+                    <td id="median"></td>
+                </tr>
+                <tr>
+                    <td>Mode</td>
+                    <td id="mode"></td>
+                </tr>
+                <tr>
+                    <td>Mean (Average)</td>
+                    <td id="mean"></td>
+                </tr>
+                <tr>
+                    <td>Geometric mean</td>
+                    <td id="gm"></td>
+                </tr>
+                <tr>
+                    <td>Standard Deviation</td>
+                    <td id="std"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 id="sortTitle"></h3>
+        <div id="sortItem"></div>
+
+
+        <div class="math-law">
+            <h3 class="item-title">Mean (Average)</h3>
+            <p>The mean (average) of a data set is found by adding all numbers in the data set and then dividing by the
+                number of values in the set. The word mean, which is a homonym for multiple other words in the English
+                language, is similarly ambiguous even in the area of mathematics. Depending on the context, whether
+                mathematical or statistical, what is meant by the "mean" changes. In its simplest mathematical
+                definition regarding data sets, the mean used is the arithmetic mean, also referred to as mathematical
+                expectation, or average. In this form, the mean refers to an intermediate value between a discrete set
+                of numbers, namely, the sum of all values in the data set, divided by the total number of values. The
+                equation for calculating the arithmetic mean is virtually identical to that for calculating the
+                statistical concepts of population and sample mean, with slight variations in the variables used:</p>
+            <img src="images/mean.png" alt="">
+
+            <h3 class="item-title">Geometric Mean</h3>
+            <p>The geometric mean in mathematics is a type of average that uses the product of the values in a set to
+                indicate central tendency. This is in contrast to the arithmetic mean that performs the same function
+                using the sum of the values in the set rather than their products. The geometric mean is useful in cases
+                where the values being compared vary largely. Imagine a car that is rated on a scale of 0-5 for fuel
+                efficiency, and a scale of 0-100 for safety. If the arithmetic means were used, the safety of the
+                vehicle would be given far more weight, since a small percentage change on a larger scale will result in
+                a larger difference than a large percentage change on a smaller scale; a change of fuel efficiency
+                rating from 2 to 5 which is a 250% increase in rating would be overshadowed by a 6.25% rating change of
+                80 to 85 if only the arithmetic mean were considered. The geometric mean accounts for this by
+                normalizing the ranges being averaged, resulting in none of the ranges dominating the weighting. Unlike
+                the arithmetic mean, any given percentage change in the geometric mean has the same effect on the
+                geometric mean. The equation for calculating the geometric mean is as follows:</p>
+            <img src="images/geometric_mean.svg" alt="" class="big-img">
+
+            <h3 class="item-title">Median</h3>
+            <p>In statistics and probability theory, the median is the value separating the higher half from the lower
+                half of a data sample, a population, or a probability distribution. For a data set, it may be thought of
+                as "the middle" value. The basic feature of the median in describing data compared to the mean (often
+                simply described as the "average") is that it is not skewed by a small proportion of extremely large or
+                small values, and therefore provides a better representation of a "typical" value. Median income, for
+                example, may be a better way to suggest what a "typical" income is, because income distribution can be
+                very skewed. The median is of central importance in robust statistics, as it is the most resistant
+                statistic, having a breakdown point of 50%: so long as no more than half the data are contaminated, the
+                median is not an arbitrarily large or small result.</p>
+            <img src="images/median_formula.svg" alt="" class="big-img">
+
+            <div class="mode-law">
+                <h3 class="item-title">Mode</h3>
+                <p>Mode means a value or a number that appears most frequently in a dataset. Sometimes we may need to
+                    find
+                    the value, which is occurring more frequently in the dataset. In such cases, we find the mode for
+                    the
+                    set of given data. There may or may not be a modal value for a given set of data. For data without
+                    any
+                    repeating values, there might be no mode at all. Also, we can find data with only one mode, two
+                    modes,
+                    three modes, or multiple modes. This depends on the given dataset.</p>
+                <h4>Mode = L + (fm−f1)h /(fm−f1)+(fm−f2)</h4>
+                <p>Where,</p>
+                <ul>
+                    <li><b>L</b>= Lower limit Mode of modal class</li>
+                    <li><b>fm </b>= Frequency of modal class</li>
+                    <li><b>f1</b> = Frequency of class preceding the modal class</li>
+                    <li><b>f2</b>= Frequency of class succeeding the modal class</li>
+                    <li><b>h</b> = Size of class interval</li>
+                </ul>
+            </div>
+
+            <div class="std-section">
+                <h3 class="item-title">Standard Deviation</h3>
+                <p>Standard deviation is a useful measure of spread for normal distributions.In normal distributions,
+                    data is symmetrically distributed with no skew. Most values cluster around
+                    a central region, with values tapering off as they go further away from the center. The standard
+                    deviation tells you how spread out from the center of the distribution your data is on average. Many
+                    scientific variables follow normal distributions, including height, standardized test scores,
+                    or job satisfaction ratings. When you have the standard deviations of different samples, you can
+                    compare their distributions using statistical tests to make inferences about the larger populations
+                    they came from.</p>
+                <img src="images/Job-satisfaction-ratings-of-three-groups.svg" class="std-img" alt="">
+                <p>The standard deviation reflects the dispersion of the distribution. The curve with the lowest
+                    standard deviation has a high peak and a small spread, while the curve with the highest standard
+                    deviation is more flat and widespread. Different formulas are used for calculating standard
+                    deviations depending on whether you have data from a whole population or a sample.</p>
+                <p> <b>Population standard deviation</b>: When you have collected data from every member of the
+                    population that you’re interested in, you can get an exact value for population standard deviation.
+                    The population standard deviation formula looks like this:</p>
+
+                <table class="std-formula-tbl">
+                    <thead>
+                        <tr>
+                            <th>Formula</th>
+                            <th>Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="std-formula">
+                                <img src="images/population-standard-deviation-formula.png" alt="">
+                            </td>
+                            <td>
+                                <ul class="std-formula-list">
+                                    <li>σ = population standard deviation</li>
+                                    <li>∑ = sum of…</li>
+                                    <li>X = each value</li>
+                                    <li>μ = population mean</li>
+                                    <li>N = number of values in the population</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><b>Sample standard deviation</b>: When you collect data from a sample, the sample standard deviation
+                    is used to make estimates or inferences about the population standard deviation.
+                    The sample standard deviation formula looks like this:</p>
+                <table class="std-formula-tbl">
+                    <thead>
+                        <tr>
+                            <th>Formula</th>
+                            <th>Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="std-formula">
+                                <img src="images/sample-standard-deviation-formula.png" alt="">
+                            </td>
+                            <td>
+                                <ul class="std-formula-list">
+                                    <li>s = sample standard deviation</li>
+                                    <li>∑ = sum of…</li>
+                                    <li>X = each value</li>
+                                    <li>x̅ = sample mean</li>
+                                    <li>n = number of values in the sample </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

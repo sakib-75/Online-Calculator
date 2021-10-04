@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion</title>
+    <link rel="stylesheet" href="CSS/all-style.css">
+    <link rel="stylesheet" href="CSS/other.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <script src="JavaScript/other.js"></script>
+    <script src="JavaScript/math.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <header class="head">
+        <div class="header-body">
+            <a class="logo" href="index.html">Calculator.com</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="math.html">Math</a></li>
+                    <li><a class="nav-link" href="other.html">Other</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" type="button" onclick="mobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <ul class="mobile-nav-list">
+                <li><a class="nav-link mobile-nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link mobile-nav-link" href="math.html">Math</a></li>
+                <li><a class="nav-link mobile-nav-link" href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <!-- Tab one -->
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label for="tabone"><i class="fas fa-ruler-vertical"></i> Length</label>
+            <div class="tab">
+                <h3 class="item-title">Length Conversion</h3>
+                <div class="conv-body">
+                    <div class="from-sec">
+                        <span class="inp-span">From</span>
+                        <input type="number" id="from_inp_len" class="all-input" onkeyup="lengthCalc()"
+                            placeholder="Input...">
+                        <select name="" id="from_select_len" class="all-select conv-sel" onchange="lengthCalc()">
+                            <option value="Meter">Meter</option>
+                            <option value="Kilometer">Kilometer</option>
+                            <option value="Centimeter">Centimeter</option>
+                            <option value="Milimeter">Milimeter</option>
+                            <option value="Micrometer">Micrometer</option>
+                            <option value="Nanometer">Nanometer</option>
+                            <option value="Mile">Mile</option>
+                            <option value="Yard">Yard</option>
+                            <option value="Foot">Foot</option>
+                            <option value="Inch">Inch</option>
+                            <option value="Nautical mile">Nautical mile</option>
+                        </select>
+                    </div>
+                    <div class="arrow">
+                        <button class="swap-btn" type="submit" title="Swap Unit" onclick="swapUnitLen()"><i
+                                class="fas fa-sync"></i></button>
+                    </div>
+                    <div class="to-sec">
+                        <span class="inp-span">To</span>
+                        <input type="text" id="to_inp_len" class="all-input to-result" readonly placeholder="Output...">
+                        <select name="" id="to_select_len" class="all-select conv-sel" onchange="lengthCalc()">
+                            <option value="Meter">Meter</option>
+                            <option value="Kilometer">Kilometer</option>
+                            <option value="Centimeter">Centimeter</option>
+                            <option value="Milimeter">Milimeter</option>
+                            <option value="Micrometer">Micrometer</option>
+                            <option value="Nanometer">Nanometer</option>
+                            <option value="Mile">Mile</option>
+                            <option value="Yard">Yard</option>
+                            <option value="Foot">Foot</option>
+                            <option value="Inch">Inch</option>
+                            <option value="Nautical mile">Nautical mile</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="result-len" class="result-show"></div>
+            </div>
+
+            <!-- Tab two -->
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo"><i class="fas fa-temperature-low"></i> Temperature</label>
+            <div class="tab">
+                <h3 class="item-title">Temperature Conversion</h3>
+                <div class="conv-body">
+                    <div class="from-sec">
+                        <span class="inp-span">From</span>
+                        <input type="number" id="from_inp_temp" class="all-input" onkeyup="temperatureCalc()"
+                            placeholder="Input...">
+                        <select name="" id="from_select_temp" class="all-select conv-sel" onchange="temperatureCalc()">
+                            <option value="Fahrenheit">Fahrenheit (°F) </option>
+                            <option value="Celsius">Celsius (°C)</option>
+                            <option value="Kelvin">Kelvin (K)</option>
+                        </select>
+                    </div>
+                    <div class="arrow">
+                        <button class="swap-btn" type="submit" title="Swap Unit" onclick="swapUnitTemp()"><i
+                                class="fas fa-sync"></i></button>
+                    </div>
+                    <div class="to-sec">
+                        <span class="inp-span">To</span>
+                        <input type="text" id="to_inp_temp" class="all-input to-result" readonly
+                            placeholder="Output...">
+                        <select name="" id="to_select_temp" class="all-select conv-sel" onchange="temperatureCalc()">
+                            <option value="Fahrenheit">Fahrenheit (°F) </option>
+                            <option value="Celsius">Celsius (°C)</option>
+                            <option value="Kelvin">Kelvin (K)</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="result-temp" class="result-show"></div>
+            </div>
+
+            <!-- Tab three -->
+            <input type="radio" name="tabs" id="tabthree">
+            <label for="tabthree"><i class="fas fa-shapes"></i> Area</label>
+            <div class="tab">
+                <h3 class="item-title">Area Conversion</h3>
+                <div class="conv-body">
+                    <div class="from-sec">
+                        <span class="inp-span">From</span>
+                        <input type="number" id="from_inp_area" class="all-input" onkeyup="areaCalc()"
+                            placeholder="Input...">
+                        <select name="" id="from_select_area" class="all-select conv-sel" onchange="areaCalc()">
+                            <option value="Square Meter">Square Meter</option>
+                            <option value="Square Kilometer">Square Kilometer</option>
+                            <option value="Square Mile">Square Mile</option>
+                            <option value="Square Yard">Square Yard</option>
+                            <option value="Square Foot">Square Foot</option>
+                            <option value="Square Inch">Square Inch</option>
+                            <option value="Hectare">Hectare</option>
+                            <option value="Acre">Acre</option>
+                        </select>
+                    </div>
+                    <div class="arrow">
+                        <button class="swap-btn" type="submit" title="Swap Unit" onclick="swapUnitArea()"><i
+                                class="fas fa-sync"></i></button>
+                    </div>
+                    <div class="to-sec">
+                        <span class="inp-span">To</span>
+                        <input type="text" id="to_inp_area" class="all-input to-result" readonly
+                            placeholder="Output...">
+                        <select name="" id="to_select_area" class="all-select conv-sel" onchange="areaCalc()">
+                            <option value="Square Meter">Square Meter</option>
+                            <option value="Square Kilometer">Square Kilometer</option>
+                            <option value="Square Mile">Square Mile</option>
+                            <option value="Square Yard">Square Yard</option>
+                            <option value="Square Foot">Square Foot</option>
+                            <option value="Square Inch">Square Inch</option>
+                            <option value="Hectare">Hectare</option>
+                            <option value="Acre">Acre</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="result-area" class="result-show"></div>
+            </div>
+
+            <!-- Tab four -->
+            <input type="radio" name="tabs" id="tabfour">
+            <label for="tabfour"><i class="fas fa-cube"></i> Volume</label>
+            <div class="tab">
+                <h3 class="item-title">Volume Conversion</h3>
+                <div class="conv-body">
+                    <div class="from-sec">
+                        <span class="inp-span">From</span>
+                        <input type="number" id="from_inp_vol" class="all-input" onkeyup="volumeCalc()"
+                            placeholder="Input...">
+                        <select name="" id="from_select_vol" class="all-select conv-sel" onchange="volumeCalc()">
+                            <option value="Liter">Liter</option>
+                            <option value="Mililiter">Mililiter</option>
+                            <option value="US Gallon">US Gallon</option>
+                            <option value="Imperial Gallon">Imperial Gallon</option>
+                            <option value="Cubic Foot">Cubic Foot</option>
+                            <option value="Cubic Inch">Cubic Inch</option>
+                        </select>
+                    </div>
+                    <div class="arrow">
+                        <button class="swap-btn" type="submit" title="Swap Unit" onclick="swapUnitVol()"><i
+                                class="fas fa-sync"></i></button>
+                    </div>
+                    <div class="to-sec">
+                        <span class="inp-span">To</span>
+                        <input type="text" id="to_inp_vol" class="all-input to-result" readonly placeholder="Output...">
+                        <select name="" id="to_select_vol" class="all-select conv-sel" onchange="volumeCalc()">
+                            <option value="Liter">Liter</option>
+                            <option value="Mililiter">Mililiter</option>
+                            <option value="US Gallon">US Gallon</option>
+                            <option value="Imperial Gallon">Imperial Gallon</option>
+                            <option value="Cubic Foot">Cubic Foot</option>
+                            <option value="Cubic Inch">Cubic Inch</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="result-vol" class="result-show"></div>
+            </div>
+
+            <!-- Tab five -->
+            <input type="radio" name="tabs" id="tabfive">
+            <label for="tabfive"><i class="fas fa-weight-hanging"></i> Weight</label>
+            <div class="tab">
+                <h3 class="item-title">Weight Conversion</h3>
+                <div class="conv-body">
+                    <div class="from-sec">
+                        <span class="inp-span">From</span>
+                        <input type="number" id="from_inp_wet" class="all-input" onkeyup="weightCalc()"
+                            placeholder="Input...">
+                        <select name="" id="from_select_wet" class="all-select conv-sel" onchange="weightCalc()">
+                            <option value="Gram">Gram</option>
+                            <option value="Kilogram">Kilogram</option>
+                            <option value="Miligram">Miligram</option>
+                            <option value="Microgram">Microgram</option>
+                            <option value="Metric Ton">Metric Ton</option>
+                            <option value="Pound">Pound</option>
+                            <option value="Ounce">Ounce</option>
+                        </select>
+                    </div>
+                    <div class="arrow">
+                        <button class="swap-btn" type="submit" title="Swap Unit" onclick="swapUnitWet()"><i
+                                class="fas fa-sync"></i></button>
+                    </div>
+                    <div class="to-sec">
+                        <span class="inp-span">To</span>
+                        <input type="text" id="to_inp_wet" class="all-input to-result" readonly placeholder="Output...">
+                        <select name="" id="to_select_wet" class="all-select conv-sel" onchange="weightCalc()">
+                            <option value="Gram">Gram</option>
+                            <option value="Kilogram">Kilogram</option>
+                            <option value="Miligram">Miligram</option>
+                            <option value="Microgram">Microgram</option>
+                            <option value="Metric Ton">Metric Ton</option>
+                            <option value="Pound">Pound</option>
+                            <option value="Ounce">Ounce</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="result-wet" class="result-show"></div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

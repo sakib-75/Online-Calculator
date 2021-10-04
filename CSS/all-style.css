@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Math, other page */
+.item-body li,
+.item-body a {
+    font-size: 18px;
+}
+/*..................*/
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.calculateBtn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color: rgba(43, 119, 59, 0.719);
+    cursor: pointer;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+.calculateBtn:hover {
+    background-color: #4F8026;
+}
+
+.all-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 200px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid gray;
+    display: block;
+}
+
+.all-input:focus {
+    border: 2px solid green;
+}
+
+.all-select {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: auto;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+.all-select:focus {
+    border: 2px solid green;
+}
+
+.alert {
+    width: auto;
+    margin: 20px 0px;
+    background-color: #F2DEDE;
+    border: 1px solid #EBCCD1;
+    border-radius: 5px;
+    color: #A94465;
+    padding: 10px;
+    display: none;
+}
+
+.closebtn {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.item-title {
+    color: #2060a0;
+}
+
+/*...................*/
+/* Header           */
+/*.................*/
+.head {
+    width: 100%;
+    background-color: #003366;
+}
+
+.header-body {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+}
+
+.nav-list a:hover {
+    background-color: white;
+    color: #003366;
+    transition-duration: 0.5s;
+}
+
+.active:link,
+.active:visited {
+    border: 2px solid white;
+}
+
+.menu-btn {
+    display: none;
+    padding: 4px 12px;
+    font-size: 24px;
+    border: 1px solid #E0E1E5;
+    border-radius: 5px;
+}
+.menu-btn i {
+    color: #7D7E80;
+    height: 20px;
+    width: 20px;
+}
+/* Moblie nav  */
+.mobile-menu{
+    background-color: rgb(238, 238, 238);
+    padding: 20px 0px;
+    display: none;
+}
+.mobile-nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.mobile-nav-link:link,
+.mobile-nav-link:visited {
+    display: inline-block;
+    color: black;
+}
+.mobile-menu li:nth-last-child(n+2){
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+/*...................*/
+/* Home page        */
+/*.................*/
+
+/* Basic Calculator */
+.calculator {
+    height: auto;
+    width: 300px;
+    padding: 20px;
+    padding-top: 0;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 15px 53px 14px rgb(0 0 0 / 10%);
+}
+
+.cal-input input,
+.display {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgb(68, 66, 66);
+    transition-duration: 0.3s;
+    color: #fff;
+    border-style: none;
+    cursor: pointer;
+}
+
+.cal-input input:hover {
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+.display {
+    width: 237px;
+    padding: 5px 10px;
+    background-color: aquamarine;
+    border: 2px solid rgb(204, 207, 207);
+    box-sizing: border-box;
+    color: black;
+    cursor: text;
+    outline: none;
+    display: block;
+}
+
+.display:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.calculator h2 {
+    text-align: center;
+}
+
+.cal-input {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+
+
+/*................*/
+/*      Tab      */
+/*..............*/
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin: 0px 0.4rem;
+    margin-bottom: 0.4rem;
+    margin-left: 0;
+    cursor: pointer;
+    background: rgb(211, 210, 210);
+    font-weight: bold;
+    transition: background ease 0.5s;
+    border-radius: 5px;
+}
+
+.tabs label:hover {
+    background-color: thistle;
+}
+
+.tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding-bottom: 10px;
+    background-color: transparent;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label {
+    background: #8B0000;
+    color: white;
+}
+
+.tabs input[type="radio"]:checked+label+.tab {
+    display: block;
+}
+

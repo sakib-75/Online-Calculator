@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="CSS/all-style.css">
+    <link rel="stylesheet" href="CSS/other.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <script src="JavaScript/other.js"></script>
+    <script src="JavaScript/math.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <header class="head">
+        <div class="header-body">
+            <a class="logo" href="index.html">Calculator.com</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="math.html">Math</a></li>
+                    <li><a class="nav-link" href="other.html">Other</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" type="button" onclick="mobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <ul class="mobile-nav-list">
+                <li><a class="nav-link mobile-nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link mobile-nav-link" href="math.html">Math</a></li>
+                <li><a class="nav-link mobile-nav-link" href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="course-body">
+            <h2>CGPA Calculator</h2>
+          
+            <table class="course-table" id="empTable">
+                <thead>
+                    <tr>
+                        <th>Course (Sl.)</th>
+                        <th>Grade Point</th>
+                        <th>Credit hour</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Course 1</td>
+                        <td><input type="number" name="Grade" placeholder="Grade"></td>
+                        <td><input type="number" name="Credit" placeholder="Credit"></td>
+                    </tr>
+                    <tr>
+                        <td>Course 2</td>
+                        <td><input type="number" name="Grade" placeholder="Grade"></td>
+                        <td><input type="number" name="Credit" placeholder="Credit"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="button" class="calculateBtn percentbtn" onclick="calculateCGPA()">
+                <i class="fas fa-chevron-circle-right"></i> Calculate
+            </button>
+            <button type="button" class="add-more" onclick="addCourse()"><i class="fas fa-plus-circle"></i> Add more course</button>
+        </div>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <span id="error"> </span>
+        </div>
+        <table class="cgpa-result">
+            <tbody>
+                <tr>
+                    <td>Total Course:</td>
+                    <td id="course"></td>
+                </tr>
+                <tr>
+                    <td>Total Credit:</td>
+                    <td id="credit"></td>
+                </tr>
+                <tr>
+                    <td>CGPA:</td>
+                    <td id="cgpa"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

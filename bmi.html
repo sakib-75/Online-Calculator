@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="CSS/all-style.css">
+    <link rel="stylesheet" href="CSS/other.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <script src="JavaScript/other.js"></script>
+    <script src="JavaScript/math.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header class="head">
+        <div class="header-body">
+            <a class="logo" href="index.html">Calculator.com</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="math.html">Math</a></li>
+                    <li><a class="nav-link" href="other.html">Other</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" type="button" onclick="mobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <ul class="mobile-nav-list">
+                <li><a class="nav-link mobile-nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link mobile-nav-link" href="math.html">Math</a></li>
+                <li><a class="nav-link mobile-nav-link" href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="tabs">
+
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label for="tabone"> USC Units</label>
+            <div class="tab">
+                <div class="bmi-inp-body">
+                    <h3 class="item-title">BMI Calculation</h3>
+                    <div class="height">
+                        <span>Height:</span>
+                        <input type="number" id="feet" placeholder="Feet">
+                        <input type="number" id="inch" placeholder="Inches">
+                    </div>
+                    <div class="weight">
+                        <span>Weight:</span>
+                        <input type="number" id="pounds" placeholder="Pounds">
+                    </div>
+                    <button type="button" class="calculateBtn percentbtn" onclick="calculateBMI1()">
+                        <i class="fas fa-chevron-circle-right"></i> Calculate
+                    </button>
+                </div>
+                <div class="alert alert1">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span id="error1"> </span>
+                </div>
+                <div class="bmi-result-section bmi1">
+                    <div class="ans-bmi">
+                        <h3 id="ans"></h3>
+                    </div>
+                    <div class="bmi-class-body">
+                        <div class="class-1 item">
+                            <p>Under weight</p>
+                            <p> &lt;18.5 </p>
+                        </div>
+                        <div class="class-2 item">
+                            <p>Normal weight</p>
+                            <p> 18.5-25 </p>
+                        </div>
+                        <div class="class-3 item">
+                            <p> Over weight</p>
+                            <p> 25-30 </p>
+                        </div>
+                        <div class="class-4 item">
+                            <p>Obese</p>
+                            <p> &gt;30 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo"> Metric Units</label>
+            <div class="tab">
+                <div class="bmi-inp-body">
+                    <h3 class="item-title">BMI Calculation</h3>
+                    <div class="height-mu">
+                        <span>Height:</span>
+                        <input type="number" id="meter" placeholder="Meter (m)">
+                    </div>
+                    <div class="weight">
+                        <span>Weight:</span>
+                        <input type="number" id="kg" placeholder="Kilogram (kg)">
+                    </div>
+                    <button type="button" class="calculateBtn percentbtn" onclick="calculateBMI2()">
+                        <i class="fas fa-chevron-circle-right"></i> Calculate
+                    </button>
+
+                </div>
+                <div class="alert alert2">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span id="error2"> </span>
+                </div>
+                <div class="bmi-result-section bmi2">
+                    <div class="ans-bmi ans-bmi2">
+                        <h3 id="ans2"></h3>
+                    </div>
+                    <div class="bmi-class-body">
+                        <div class="class-1 item">
+                            <p>Under weight</p>
+                            <p> &lt;18.5 </p>
+                        </div>
+                        <div class="class-2 item">
+                            <p>Normal weight</p>
+                            <p> 18.5-25 </p>
+                        </div>
+                        <div class="class-3 item">
+                            <p> Over weight</p>
+                            <p> 25-30 </p>
+                        </div>
+                        <div class="class-4 item">
+                            <p>Obese</p>
+                            <p> &gt;30 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

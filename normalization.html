@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data normalization</title>
+    <link rel="stylesheet" href="CSS/all-style.css">
+    <link rel="stylesheet" href="CSS/math.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <script src="JavaScript/math.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header class="head">
+        <div class="header-body">
+            <a class="logo" href="index.html">Calculator.com</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="math.html">Math</a></li>
+                    <li><a class="nav-link" href="other.html">Other</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" type="button" onclick="mobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <ul class="mobile-nav-list">
+                <li><a class="nav-link mobile-nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link mobile-nav-link" href="math.html">Math</a></li>
+                <li><a class="nav-link mobile-nav-link" href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h3 class="item-title">Data normalization</h3>
+        <div class="inputBox">
+            <textarea id="data" class="numbersBox" rows="10" placeholder="Enter number here..."></textarea>
+            <br>
+            <select name="" id="norm-type" class="all-select">
+                <option value="n1">Min-max</option>
+                <option value="n2">Z-score 1</option>
+                <option value="n3">Z-score 2</option>
+            </select>
+            <select name="" id="norm-select" class="all-select" onchange="singleValShow()">
+                <option value="1">All value</option>
+                <option value="2">Single value</option>
+            </select>
+            <input type="number" id="single-inp" class="all-input" placeholder="Enter value">
+
+            <div class="btnArea">
+                <button class="calculateBtn" onclick="dataNormalization()"><i class="fas fa-chevron-circle-right"></i>
+                    Calculate</button>
+                <a href="normalization.html"><button id="resetBtn"><i class="fas fa-redo"></i> Reset</button></a>
+            </div>
+        </div>
+
+        <div class="norm-result-bdy">
+            <img src="images/Normalization-Formula.jpg" alt="" class="norm-formula1">
+            <img src="images/Standardized.webp" alt="" class="norm-formula2">
+            <img src="images/normalization mean absolute.png" alt="" class="norm-formula3">
+
+            <div class="single-norm">
+                <h3 class="single-norm-title"></h3>
+                <p class="show1"></p>
+                <p class="show2"></p>
+                <p class="single-norm-ans"></p>
+            </div>
+            <div class="all-norm">
+                <h3 class="all-norm-title"></h3>
+                <div class="all-norm-par"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

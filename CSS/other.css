@@ -1,0 +1,201 @@
+body {
+    background-image: none;
+}
+
+.conv-body {
+    display: grid;
+    grid-template-columns: 250px 100px auto;
+}
+.conv-sel{
+    width: 200px;
+}
+.arrow {
+    display: flex;
+    align-items: center;
+}
+
+.arrow i {
+    font-size: 28px;
+    color: rgb(87, 86, 86);
+}
+
+.arrow button {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.to-result {
+    background-color: rgba(221, 219, 219, 0.781);
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+
+.to-result:focus {
+    border: 2px solid transparent;
+}
+
+.inp-span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.result-show {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* GPA calculation  */
+.course-table {
+    background-color: #EEEEEE;
+    border: 1px solid #BBBBBB;
+    padding: 10px;
+    width: auto;
+}
+
+.course-table td {
+    padding: 5px;
+}
+
+.course-table input {
+    padding: 5px;
+    font-size: 18px;
+}
+
+.course-table input:focus {
+    outline-color: green;
+}
+
+.add-more {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: black;
+    border: none;
+    background-color: rgba(163, 211, 207, 0.719);
+    cursor: pointer;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+.add-more:hover {
+    background-color: rgb(172, 185, 184);
+}
+
+#RemoveBtn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    transition: 0.5s;
+}
+
+#RemoveBtn:hover {
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+}
+
+.cgpa-result {
+    font-size: 20px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    display: none;
+}
+
+.cgpa-result td {
+    border: 1px solid #DDDDDD;
+    padding: 5px 15px;
+}
+
+.cgpa-result tr:nth-child(odd) {
+    background-color: #F9F9F9;
+}
+
+/* BMI */
+.bmi-inp-body {
+    background-color: #EEEEEE;
+    border: 1px solid #BBBBBB;
+    margin-top: 15px;
+    padding: 20px;
+    display: inline-block;
+    width: auto;
+}
+
+.bmi-inp-body span {
+    width: 70px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.bmi-inp-body input:focus {
+    outline-color: green;
+}
+
+.height,
+.weight,
+.height-mu {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.height input {
+    width: 106px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.weight input,
+.height-mu input {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.bmi-result-section {
+    margin-top: 20px;
+    display: none;
+}
+
+.ans-bmi {
+    width: 305px;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    border: 5px dotted rgb(204, 204, 204);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.bmi-class-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.item {
+    padding: 0px 10px;
+    width: 150px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.class-1 {
+    background-color: #FFB548;
+}
+
+.class-2 {
+    background-color: #00A33F;
+}
+
+.class-3 {
+    background-color: #F36532;
+}
+
+.class-4 {
+    background-color: #CA1C23;
+}

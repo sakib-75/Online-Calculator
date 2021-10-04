@@ -1,0 +1,395 @@
+/*...................*/
+/* MEAN-CALCULATION */
+/*.................*/
+body {
+    background-image: none;
+}
+
+.inputBox {
+    height: auto;
+    width: 100%;
+    background-color: rgb(231, 231, 226);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 1px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 2px 1px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 2px 1px 10px 0px rgba(50, 50, 50, 0.3);
+}
+
+.radioArea {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.radioArea input[type=radio] {
+    height: 16px;
+    width: 16px;
+}
+
+.btnArea {
+    text-align: center;
+}
+
+.numbersBox {
+    display: block;
+    resize: vertical;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid transparent;
+}
+
+.numbersBox:focus {
+    border: 1px solid rgb(9, 99, 1);
+}
+
+.short-ht-inp {
+    height: 80px;
+}
+
+#resetBtn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color: rgb(121, 118, 118);
+    cursor: pointer;
+    display: inline-block;
+}
+
+#resetBtn:hover {
+    background-color: rgb(119, 118, 118);
+}
+
+.redText {
+    color: red;
+}
+
+#Table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    display: none;
+}
+
+td {
+    width: 60%;
+    border: 1px solid rgb(95, 94, 94);
+    padding: 7px 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#Table tr:nth-child(odd) {
+    background-color: #33292417;
+}
+
+#Table tr td:last-child {
+    color: rgb(2, 117, 2);
+    text-align: center;
+}
+
+#sortItem span {
+    font-size: 18px;
+    background-color: rgb(209, 209, 209);
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgb(66, 61, 61);
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 12px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Math Theory */
+.math-law {
+    width: 100%;
+}
+
+.math-law p {
+    text-align: justify;
+}
+
+.big-img {
+    width: 300px;
+}
+
+.mode-law h4,
+ul b {
+    color: #4D5968;
+}
+
+/* Table  */
+.std-formula-tbl {
+    border-collapse: collapse;
+    margin: 30px 0px;
+}
+
+.std-formula-tbl th {
+    background-color: #F8F7F5;
+    padding: 8px 16px;
+    text-align: left;
+    color: #0D405F;
+    border-bottom: 2px solid #1B2B68;
+}
+
+.std-formula-tbl td {
+    border: none;
+}
+
+/* Image */
+.std-formula {
+    width: 230px;
+}
+
+.std-formula-list {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+/*....................*/
+/* Percentage  page  */
+/*..................*/
+
+
+.icon-input {
+    position: relative;
+}
+
+.icon-input i {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+#percent,
+#percentCng {
+    padding: 10px;
+    padding-left: 35px;
+    width: 200px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+#percent:focus,
+#percentCng:focus {
+    border: 2px solid #4F8026;
+}
+
+.percentbtn {
+    display: block;
+}
+
+.result {
+    width: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(243, 235, 125, 0.918);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: none;
+}
+
+
+/*....................*/
+/* Box plot          */
+/*..................*/
+
+.add-group {
+    background-color: rgb(83, 235, 235);
+    color: black;
+}
+
+.add-group:hover {
+    background-color: rgb(50, 184, 184);
+}
+
+.BoxPlot {
+    width: auto;
+}
+
+/* Update data */
+
+#short-answer {
+    margin: 30px 0px;
+    font-size: 22px;
+    overflow: auto;
+}
+
+.full-ans,
+#fa-title {
+    font-size: 22px;
+    margin: 10px 0px;
+}
+
+/*  Distance measure  */
+.ans-title {
+    text-align: center;
+    color: #2060a0;
+}
+
+.cs-result,
+.ed-result,
+.mn-result,
+.supd-result,
+.mnk-result {
+    font-size: 24px;
+    width: 100%;
+    display: none;
+    margin-top: 30px;
+}
+
+.part-img {
+    display: block;
+}
+
+.cs-formula-img {
+    width: 80%;
+}
+
+.hide-pinp {
+    display: none;
+}
+
+/* Toggle button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #3861FB;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #3861FB;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* end toggle */
+.inp-toggle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.light-color {
+    color: gray;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.dp-select {
+    margin-left: 5px;
+    border: 1px solid gray;
+    outline-color: green;
+    border-radius: 5px;
+}
+
+/* Normalization */
+.norm-result-bdy {
+    font-size: 22px;
+}
+
+#single-inp {
+    display: none;
+}
+
+.norm-formula1 {
+    width: 50%;
+    margin-top: 20px;
+    display: none;
+}
+
+.norm-formula2 {
+    width: 30%;
+    margin-top: 20px;
+    display: none;
+}
+
+.norm-formula3 {
+    display: none;
+}
+
+.putBar {
+    border-top: 2px solid black;
+}

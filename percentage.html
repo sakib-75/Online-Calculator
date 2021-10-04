@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="CSS/all-style.css">
+    <link rel="stylesheet" href="CSS/math.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <script src="JavaScript/math.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+    <header class="head">
+        <div class="header-body">
+            <a class="logo" href="index.html">Calculator.com</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="math.html">Math</a></li>
+                    <li><a class="nav-link" href="other.html">Other</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" type="button" onclick="mobileMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <ul class="mobile-nav-list">
+                <li><a class="nav-link mobile-nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link mobile-nav-link" href="math.html">Math</a></li>
+                <li><a class="nav-link mobile-nav-link" href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label for="tabone"><i class="fas fa-percent"></i> Percentage</label>
+            <div class="tab">
+                <h3 class="item-title">Calculate Percentage</h3>
+                <input type="number" id="number" class="all-input" placeholder="Number">
+                <div class="icon-input">
+                    <input type="number" id="percent" placeholder="Percentage">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <button type="button" class="calculateBtn percentbtn" onclick="percentage()">
+                    <i class="fas fa-chevron-circle-right"></i> Calculate
+                </button>
+                <div id="result1" class="result rslt1"></div>
+                <div class="alert alrt1">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span id="error1"> </span>
+                </div>
+            </div>
+
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo"><i class="fas fa-percent"></i> Percentage Difference</label>
+            <div class="tab">
+                <h3 class="item-title">Calculate Percentage Difference</h3>
+                <input type="number" id="number1" class="all-input" placeholder="Number 1">
+                <input type="number" id="number2" class="all-input" placeholder="Number 2">
+                <button type="button" class="calculateBtn percentbtn" onclick="percentageDifference()">
+                    <i class="fas fa-chevron-circle-right"></i> Calculate
+                </button>
+                <div id="result2" class="result rslt2"></div>
+                <div class="alert alrt2">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span id="error2"> </span>
+                </div>
+            </div>
+
+            <input type="radio" name="tabs" id="tabthree">
+            <label for="tabthree"><i class="fas fa-percent"></i> Percentage Change</label>
+            <div class="tab">
+                <h3 class="item-title">Calculate Percentage Change</h3>
+                <input type="number" id="numberCng" class="all-input" placeholder="Number">
+                <select name="" id="cngOption" class="all-select">
+                    <option value="i">Increase</option>
+                    <option value="d">Decrease</option>
+                </select>
+                <div class="icon-input">
+                    <input type="number" id="percentCng" placeholder="Percentage">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <button type="button" class="calculateBtn percentbtn" onclick="percentageChange()">
+                    <i class="fas fa-chevron-circle-right"></i> Calculate
+                </button>
+                <div id="result3" class="result rslt3"></div>
+                <div class="alert alrt3">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span id="error3"> </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
