@@ -188,13 +188,13 @@ ul b {
 
 .icon-input i {
     position: absolute;
-    top: 15px;
+    top: 10px;
     left: 10px;
 }
 
 #percent,
 #percentCng {
-    padding: 10px;
+    padding: 5px;
     padding-left: 35px;
     width: 200px;
     font-size: 18px;
